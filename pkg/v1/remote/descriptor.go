@@ -32,6 +32,7 @@ import (
 	"github.com/google/go-containerregistry/pkg/v1/partial"
 	"github.com/google/go-containerregistry/pkg/v1/remote/transport"
 	"github.com/google/go-containerregistry/pkg/v1/types"
+	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 )
 
 // ErrSchema1 indicates that we received a schema1 manifest from the registry.
@@ -349,6 +350,14 @@ func (f *fetcher) headManifest(ref name.Reference, acceptable []types.MediaType)
 		Size:      size,
 		MediaType: mediaType,
 	}, nil
+}
+
+func (f *fetcher) Fetch(ctx context.Context, desc ocispec.Descriptor) (io.ReadCloser, error) {
+	hash, err := v1.NewHash(desc.Digest.String())
+	if err != nil {
+		return nil, err
+	}
+	return f.fetchBlob(ctx, hash)
 }
 
 func (f *fetcher) fetchBlob(ctx context.Context, h v1.Hash) (io.ReadCloser, error) {

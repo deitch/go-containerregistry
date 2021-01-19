@@ -19,6 +19,7 @@ import (
 	"io"
 
 	"github.com/google/go-containerregistry/pkg/v1/types"
+	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 )
 
 // Manifest represents the OCI image manifest in a structured way.
@@ -64,4 +65,26 @@ func ParseIndexManifest(r io.Reader) (*IndexManifest, error) {
 		return nil, err
 	}
 	return &im, nil
+}
+
+func (d Descriptor) Ocispec() (out ocispec.Descriptor, err error) {
+	b, err := json.Marshal(d)
+	if err != nil {
+		return out, err
+	}
+	if err := json.Unmarshal(b, out); err != nil {
+		return out, err
+	}
+	return out, nil
+}
+
+func ParseDescriptor(in ocispec.Descriptor) (out Descriptor, err error) {
+	b, err := json.Marshal(in)
+	if err != nil {
+		return out, err
+	}
+	if err := json.Unmarshal(b, out); err != nil {
+		return out, err
+	}
+	return out, nil
 }
