@@ -15,7 +15,6 @@ github.com/containerd/containerd/platforms
 github.com/containerd/stargz-snapshotter/estargz
 github.com/containerd/stargz-snapshotter/estargz/errorutil
 # github.com/cpuguy83/go-md2man/v2 v2.0.1
-## explicit
 github.com/cpuguy83/go-md2man/v2/md2man
 # github.com/docker/cli v20.10.9+incompatible
 ## explicit
@@ -104,7 +103,7 @@ github.com/pkg/errors
 github.com/russross/blackfriday/v2
 # github.com/sirupsen/logrus v1.8.1
 github.com/sirupsen/logrus
-# github.com/spf13/cobra v1.2.1
+# github.com/spf13/cobra v1.4.0
 ## explicit
 github.com/spf13/cobra
 github.com/spf13/cobra/doc
@@ -193,3 +192,5 @@ google.golang.org/protobuf/types/known/timestamppb
 ## explicit
 # gopkg.in/yaml.v2 v2.4.0
 gopkg.in/yaml.v2
+# gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+## explicit
