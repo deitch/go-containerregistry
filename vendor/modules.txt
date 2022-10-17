@@ -14,8 +14,7 @@ github.com/containerd/containerd/platforms
 ## explicit
 github.com/containerd/stargz-snapshotter/estargz
 github.com/containerd/stargz-snapshotter/estargz/errorutil
-# github.com/cpuguy83/go-md2man/v2 v2.0.1
-## explicit
+# github.com/cpuguy83/go-md2man/v2 v2.0.2
 github.com/cpuguy83/go-md2man/v2/md2man
 # github.com/docker/cli v20.10.9+incompatible
 ## explicit
@@ -79,7 +78,7 @@ github.com/google/go-cmp/cmp/internal/function
 github.com/google/go-cmp/cmp/internal/value
 # github.com/gorilla/mux v1.8.0
 ## explicit
-# github.com/inconshreveable/mousetrap v1.0.0
+# github.com/inconshreveable/mousetrap v1.0.1
 github.com/inconshreveable/mousetrap
 # github.com/klauspost/compress v1.13.6
 github.com/klauspost/compress
@@ -104,7 +103,7 @@ github.com/pkg/errors
 github.com/russross/blackfriday/v2
 # github.com/sirupsen/logrus v1.8.1
 github.com/sirupsen/logrus
-# github.com/spf13/cobra v1.2.1
+# github.com/spf13/cobra v1.6.0
 ## explicit
 github.com/spf13/cobra
 github.com/spf13/cobra/doc
@@ -191,5 +190,5 @@ google.golang.org/protobuf/types/known/durationpb
 google.golang.org/protobuf/types/known/timestamppb
 # gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 ## explicit
-# gopkg.in/yaml.v2 v2.4.0
-gopkg.in/yaml.v2
+# gopkg.in/yaml.v3 v3.0.1
+gopkg.in/yaml.v3
