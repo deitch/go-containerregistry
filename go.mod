@@ -3,12 +3,12 @@ module github.com/google/go-containerregistry
 go 1.18
 
 require (
-	github.com/containerd/stargz-snapshotter/estargz v0.12.1
+	github.com/containerd/stargz-snapshotter/estargz v0.13.0
 	github.com/docker/cli v20.10.20+incompatible
 	github.com/docker/distribution v2.8.1+incompatible
 	github.com/docker/docker v20.10.20+incompatible
 	github.com/google/go-cmp v0.5.9
-	github.com/klauspost/compress v1.15.11
+	github.com/klauspost/compress v1.15.12
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.1.0-rc2
